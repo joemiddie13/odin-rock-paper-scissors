@@ -1,5 +1,12 @@
 function getComputerChoice() {
-    var options = ["Rock", "Paper", "Scissors"];
-    var randomIndex = Math, floor(Math.random() * options.length);
+    const options = ["rock", "paper", "scissors"];
+    const randomIndex = Math.floor(Math.random() * options.length);
     return options[randomIndex];
+  }
+
+const hand = getComputerChoice();
+console.log(hand);
+
+function playRound(playerSelection, computerSelection) {
+    
 }
