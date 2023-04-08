@@ -30,15 +30,18 @@ function getComputerChoice() {
 // const computerSelection = getComputerChoice();
 // console.log(playRound(playerSelection, computerSelection));
 
-function playRound(playerSelection, getComputerChoice) {
+
+const compChoice = getComputerChoice()
+
+function playRound(playerSelection, compChoice) {
     playerSelection = playerSelection.toLowerCase();
-    if (playerSelection === getComputerChoice) {
+    if (playerSelection === compChoice) {
         return "You draw!";
-    } else if (playerSelection == "rock" && getComputerChoice == "scissors") {
+    } else if (playerSelection == "rock" && compChoice == "scissors") {
         return "You win!";
-    } else if (playerSelection == "paper" && getComputerChoice == "rock") {
+    } else if (playerSelection == "paper" && compChoice == "rock") {
         return "You win!";
-    } else if (playerSelection == "scissors" && getComputerChoice == "paper") {
+    } else if (playerSelection == "scissors" && compChoice == "paper") {
         return "You win!";
     } else {
         return "You lose!";
@@ -49,8 +52,8 @@ function game() {
     let playerWins = 0;
     let computerWins = 0;
     for (var i = 0; i < 5; i++) {
-        let playerSelection = prompt("Make your choice: rock, paper, or scissors?");
-        let computerSelection = getComputerChoice
+        playerSelection = prompt("Make your choice: rock, paper, or scissors?");
+        computerSelection = getComputerChoice()
         let result = playRound(playerSelection, computerSelection);
         console.log("Round " + (i + 1) + ": You chose " + playerSelection + computerSelection + ", result: " + result);
         if (result === "You win!") {
@@ -58,5 +61,13 @@ function game() {
         } else if (result === "You lose!") {
             computerWins++;
         }
+    }
+    console.log("Final score: You " + playerWins + ", computer " + computerWins);
+    if (playerWins > computerWins) {
+        console.log("You win the game!");
+    } else if (playerWins < computerWins) {
+        console.log("You lose the game.");
+    } else {
+        console.log("The game is a draw.");
     }
 }
