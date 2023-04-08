@@ -53,9 +53,9 @@ function game() {
     let computerWins = 0;
     for (var i = 0; i < 5; i++) {
         playerSelection = prompt("Make your choice: rock, paper, or scissors?");
-        computerSelection = getComputerChoice()
-        let result = playRound(playerSelection, computerSelection);
-        console.log("Round " + (i + 1) + ": You chose " + playerSelection + computerSelection + ", result: " + result);
+        // computerSelection = compChoice
+        let result = playRound(playerSelection, compChoice);
+        console.log("Round " + (i + 1) + ": You chose " + playerSelection + compChoice + ", result: " + result);
         if (result === "You win!") {
             playerWins++;
         } else if (result === "You lose!") {
