@@ -53,4 +53,16 @@
 
 function getComputerChoice() {
   const options = ["rock", "paper", "scissors"]
+  const randomChoice = Math.floor(Math.random() * options.length);
+  return options[randomChoice];
+}
+
+// Write a function that plays a single round of rock, paper scissors
+// function takes two parameters (playerSelection, computerSelection)
+// return a string that declares a winner
+
+// function
+
+function playRound(playerSelection, computerSelection) {
+
 }
