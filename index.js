@@ -59,10 +59,18 @@ function getComputerChoice() {
 
 // Write a function that plays a single round of rock, paper scissors
 // function takes two parameters (playerSelection, computerSelection)
+// whatever the user inputs needs to be case-INSENSITIVE
+// if playerSelection === computerSelection then return a "draw!"
+// if playerSelection is "rock" and computer selects "scissors", then return "win!"
+// if player selects "paper" and computer selects "rock", then return "win!"
+// if player selects "scissors" and computer selects "paper", then return "win!"
+// if those combinations don't happen then the player has to lose!
 // return a string that declares a winner
 
 // function
 
 function playRound(playerSelection, computerSelection) {
+    
 
+    return 
 }
